@@ -1,11 +1,137 @@
 "use client";
-// sample commit for my github
+
 import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [showLoader, setShowLoader] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activePlatform, setActivePlatform] = useState(0);
+  const [activeCapability, setActiveCapability] = useState(0);
+
+  const testimonials = [
+    {
+      text: "Front Row is one of the leading agencies in Retail Media. We hold a close partnership with the team who are constantly at the forefront of the developments in our fast-paced industry. I am highly appreciative of both their expertise and their results-driven mindset.",
+      author: "CORINNA HOHENLEITNER",
+      position: "Director CEU, Activation, CRITEO",
+      tag: "RETAIL MEDIA",
+    },
+    {
+      text: "The Ecommerce Management team at Front Row provided exceptional Amazon services, from listing optimization to content creation, consulting and advertising. Their Amazon and further retail channels expertise helped us maximize our potential and reach a wider audience. I highly recommend [Front Row Ecommerce Management division] to anyone looking to grow their business on Amazon.",
+      author: "SARAH JOHNSON",
+      position: "Head of Digital, WELLNESS BRAND",
+      tag: "RETAIL MEDIA",
+    },
+  ];
+
+  const platforms = [
+    {
+      name: "ADFERENCE",
+      logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=400&h=300&fit=crop",
+    },
+    {
+      name: "shopify",
+      logo: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+    },
+    {
+      name: "REVOLVE",
+      logo: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
+    },
+  ];
+
+  const capabilities = [
+    {
+      title: "AMAZON MARKETPLACE GROWTH",
+      subtitle:
+        "Transform your brand's wellness, and CPG brands on Amazon through flexible partnership models that deliver strategic excellence and operational excellence.",
+      image:
+        "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=500",
+      color: "bg-orange-500",
+    },
+    {
+      title: "RETAIL MEDIA",
+      subtitle:
+        "Maximize your brand's visibility and profitability on leading marketplaces and retailer-owned ad networks with data-driven advertising strategies.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500",
+      color: "bg-red-900",
+    },
+    {
+      title: "BRAND STRATEGY & CREATIVE CONTENT",
+      subtitle:
+        "Craft compelling brand narratives and visual identities that authentically differentiate your brand and strengthen consumer connections in an evolving marketplace.",
+      image:
+        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500",
+      color: "bg-purple-900",
+    },
+    {
+      title: "D2C MARKETING",
+      subtitle:
+        "Create meaningful consumer engagement strategies that connect with strategically targeted convert awareness into action and loyalty.",
+      image:
+        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500",
+      color: "bg-red-700",
+    },
+    {
+      title: "B2B MARKETING",
+      subtitle:
+        "Generate high-value leads and drive growth with performance-driven strategies tailored for complex B2B buying journeys.",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500",
+      color: "bg-blue-900",
+    },
+  ];
+
+  const workItems = [
+    {
+      title: "Maximizing effective ad spend through A/B testing",
+      description:
+        "We were approaching a pivotal Amazon event in the health and beauty category whose ads weren't engaging shoppers as much as they should.",
+      tag: "RETAIL MEDIA",
+      image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400",
+    },
+    {
+      title: "Scaling a global digital shelf on Amazon",
+      description:
+        "A global CPG leader needed our support regarding the operational management of their digital shelf across 11 countries, comprised of over 2,000 product listings per country.",
+      tag: "RETAIL MEDIA",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
+    },
+    {
+      title:
+        "Building a custom AMC dayparting analysis to drive incremental sales",
+      description:
+        "While monitoring the advertising performance for one of our clients, we identified a pattern in the day of the week, to better understand what was causing these issues.",
+      tag: "RETAIL MEDIA",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400",
+    },
+    {
+      title:
+        "Implementing Sponsored Ads to boost visibility on crucial platforms",
+      description:
+        "A global Amazon vendor in the FMCG category turned to us to improve the management of their advertising on Tesco, the largest retail chain in the UK.",
+      tag: "RETAIL MEDIA",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400",
+    },
+  ];
+
+  const brandLogos = [
+    "BOSCH",
+    "essity",
+    "HALO",
+    "LEONARDO",
+    "BLANCO",
+    "SENNHEISER",
+    "Owlet",
+    "VIACOM",
+    "Paulmann",
+    "tesa",
+    "RÖSLE",
+    "Perrigo",
+    "Unilever",
+    "CAMPARI",
+  ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +149,36 @@ export default function HomePage() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const nextTestimonial = () => {
+    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setActiveTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  const nextPlatform = () => {
+    setActivePlatform((prev) => (prev + 1) % platforms.length);
+  };
+
+  const prevPlatform = () => {
+    setActivePlatform(
+      (prev) => (prev - 1 + platforms.length) % platforms.length
+    );
+  };
+
+  const nextCapability = () => {
+    setActiveCapability((prev) => (prev + 1) % capabilities.length);
+  };
+
+  const prevCapability = () => {
+    setActiveCapability(
+      (prev) => (prev - 1 + capabilities.length) % capabilities.length
+    );
+  };
 
   if (showLoader) {
     return (
@@ -93,6 +249,14 @@ export default function HomePage() {
             transform: scale(1);
           }
         }
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
         .animate-fadeIn {
           animation: fadeIn 0.6s ease-out;
         }
@@ -109,6 +273,9 @@ export default function HomePage() {
         }
         .animate-scaleIn {
           animation: scaleIn 0.8s ease-out;
+        }
+        .animate-scroll {
+          animation: scroll 30s linear infinite;
         }
       `}</style>
 
@@ -449,14 +616,388 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
+      {/* Our Work Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center">
-            <h3 className="text-3xl font-black text-[#d4ff00] mb-2">
-              FRONT ROW
-            </h3>
-            <p className="text-gray-400">Commerce Catalysts</p>
+          <div className="mb-12">
+            <p className="text-sm font-bold text-gray-600 mb-2 tracking-wider">
+              OUR WORK
+            </p>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+              <h2 className="text-6xl font-black max-w-2xl animate-slideInLeft">
+                WE'RE YOUR ECOMMERCE{" "}
+                <span className="italic font-serif">NAVIGATOR</span>
+              </h2>
+              <div className="max-w-xl animate-slideInRight">
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  We expand your current business and your geographic scope with
+                  both strategic ecommerce guidance and implementation. We help
+                  your brand grow from advertising management and retail account
+                  management to content creation and conversion optimization,
+                  while developing your Shopify storefront and empowering you to
+                  make data-driven decisions with Catapult, our proprietary
+                  technology.
+                </p>
+                <button className="px-8 py-3 border-2 border-black text-black rounded-full font-bold hover:bg-black hover:text-white transition-all flex items-center space-x-2 group">
+                  <span>EXPLORE ALL WORK</span>
+                  <span className="text-xl group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {workItems.map((item, index) => (
+              <div
+                key={index}
+                className="group cursor-pointer animate-scaleIn"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden rounded-2xl mb-4 h-64">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-black text-[#d4ff00] text-xs font-bold px-3 py-1 rounded-full">
+                      {item.tag}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-black mb-2 group-hover:text-[#d4ff00] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {item.description}
+                </p>
+                <button className="text-sm font-bold hover:translate-x-2 transition-transform inline-block">
+                  READ MORE →
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Partners Scrolling Section */}
+      <section className="py-16 bg-[#8b5a7d] overflow-hidden">
+        <div className="mb-8">
+          <p className="text-white text-sm font-bold tracking-wider text-center">
+            OUR BRAND PARTNERS
+          </p>
+        </div>
+        <div className="relative">
+          <div className="flex animate-scroll">
+            {[...brandLogos, ...brandLogos].map((brand, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 px-12 flex items-center justify-center"
+              >
+                <span className="text-white text-3xl font-black opacity-80 hover:opacity-100 transition-opacity">
+                  {brand}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-black text-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <p className="text-sm font-bold text-gray-400 mb-8 tracking-wider text-center">
+            OUR TESTIMONIALS
+          </p>
+
+          <div className="relative max-w-6xl mx-auto">
+            <div className="flex items-center justify-center gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className={`transition-all duration-700 ${
+                    index === activeTestimonial
+                      ? "flex-1 opacity-100 scale-100"
+                      : "flex-1 opacity-30 scale-95 blur-sm"
+                  }`}
+                >
+                  <div className="text-left">
+                    <div className="text-8xl text-[#d4ff00] mb-4 font-serif leading-none">
+                      "
+                    </div>
+                    <p className="text-2xl font-light leading-relaxed mb-8">
+                      {testimonial.text}
+                    </p>
+                    <div className="mt-8">
+                      <p className="text-lg font-black mb-1">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-gray-400 mb-3">
+                        {testimonial.position}
+                      </p>
+                      <span className="inline-block bg-[#d4ff00] text-black text-xs font-bold px-3 py-1 rounded-full">
+                        {testimonial.tag}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <button
+                onClick={prevTestimonial}
+                className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextTestimonial}
+                className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Partners Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-5xl font-black mb-16 text-center">
+            OUR PLATFORM PARTNERS
+          </h2>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-8">
+              {platforms.map((platform, index) => (
+                <div
+                  key={index}
+                  className={`transition-all duration-700 ${
+                    index === activePlatform
+                      ? "w-2/5 opacity-100 scale-100"
+                      : "w-1/5 opacity-40 scale-90"
+                  }`}
+                >
+                  <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                    <div className="aspect-video flex items-center justify-center p-8">
+                      <span className="text-4xl font-black">
+                        {platform.name}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <button
+                onClick={prevPlatform}
+                className="w-14 h-14 rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextPlatform}
+                className="w-14 h-14 rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-12 items-start mb-12">
+            <div className="lg:w-1/2">
+              <h2 className="text-6xl font-black mb-6">
+                DISCOVER ALL{" "}
+                <span className="italic font-serif">CAPABILITIES</span>
+              </h2>
+            </div>
+            <div className="lg:w-1/2">
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Individually, our capabilities are powerful. Together, they're
+                even more dynamic—moving at the speed of commerce to uncover new
+                opportunities for growth.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div className="flex gap-6">
+                {capabilities.map((capability, index) => (
+                  <div
+                    key={index}
+                    className={`flex-shrink-0 transition-all duration-700 ${
+                      index === activeCapability
+                        ? "w-[600px] opacity-100"
+                        : "w-[400px] opacity-60"
+                    }`}
+                  >
+                    <div
+                      className={`${capability.color} rounded-3xl overflow-hidden h-[500px] relative group cursor-pointer`}
+                    >
+                      <img
+                        src={capability.image}
+                        alt={capability.title}
+                        className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500"
+                      />
+                      <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                        <h3 className="text-3xl font-black mb-4">
+                          {capability.title}
+                        </h3>
+                        <p className="text-sm text-gray-200 mb-6 leading-relaxed">
+                          {capability.subtitle}
+                        </p>
+                        <button className="inline-flex items-center space-x-2 bg-[#d4ff00] text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform w-fit group">
+                          <span>DISCOVER</span>
+                          <span className="text-xl group-hover:translate-x-1 transition-transform">
+                            →
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <button
+                onClick={prevCapability}
+                className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextCapability}
+                className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-32 bg-[#d4ff00]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="lg:w-1/2 animate-slideInLeft">
+              <p className="text-sm font-bold text-black mb-4 tracking-wider">
+                CONTACT US
+              </p>
+              <h2 className="text-6xl font-black mb-6">
+                LET'S START{" "}
+                <span className="italic font-serif">A PARTNERSHIP</span>
+              </h2>
+            </div>
+            <div className="lg:w-1/2 animate-slideInRight">
+              <p className="text-xl text-black mb-8 leading-relaxed">
+                Are you ready to accelerate your commerce growth? Pull up a seat
+                and share your brand vision with us.
+              </p>
+              <button className="px-10 py-4 bg-black text-[#d4ff00] rounded-full font-bold text-lg hover:scale-105 transition-all flex items-center space-x-3 group">
+                <span>CONTACT US</span>
+                <span className="text-2xl group-hover:translate-x-2 transition-transform">
+                  →
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div>
+              <h3 className="text-3xl font-black text-[#d4ff00] mb-4">
+                FRONT ROW
+              </h3>
+              <p className="text-gray-400 text-sm">Commerce Catalysts</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">SERVICES</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Retail Media
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Amazon Growth
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Brand Strategy
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  D2C Marketing
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">COMPANY</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  About Us
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Our Work
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Careers
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Contact
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">CONNECT</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  LinkedIn
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Twitter
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Instagram
+                </li>
+                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                  Facebook
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              © 2025 Front Row. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm text-gray-500">
+              <a href="#" className="hover:text-[#d4ff00] transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-[#d4ff00] transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-[#d4ff00] transition-colors">
+                Cookie Policy
+              </a>
+            </div>
           </div>
         </div>
       </footer>
