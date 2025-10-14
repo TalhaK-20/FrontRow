@@ -12,13 +12,13 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      text: "Front Row is one of the leading agencies in Retail Media. We hold a close partnership with the team who are constantly at the forefront of the developments in our fast-paced industry. I am highly appreciative of both their expertise and their results-driven mindset.",
+      text: "SFB Marketing Limited is one of the leading agencies in Retail Media. We hold a close partnership with the team who are constantly at the forefront of the developments in our fast-paced industry. I am highly appreciative of both their expertise and their results-driven mindset.",
       author: "CORINNA HOHENLEITNER",
       position: "Director CEU, Activation, CRITEO",
       tag: "RETAIL MEDIA",
     },
     {
-      text: "The Ecommerce Management team at Front Row provided exceptional Amazon services, from listing optimization to content creation, consulting and advertising. Their Amazon and further retail channels expertise helped us maximize our potential and reach a wider audience. I highly recommend [Front Row Ecommerce Management division] to anyone looking to grow their business on Amazon.",
+      text: "The Ecommerce Management team at SFB provided exceptional Amazon services, from listing optimization to content creation, consulting and advertising. Their Amazon and further retail channels expertise helped us maximize our potential and reach a wider audience. I highly recommend [SFB Ecommerce Management division] to anyone looking to grow their business on Amazon.",
       author: "SARAH JOHNSON",
       position: "Head of Digital, WELLNESS BRAND",
       tag: "RETAIL MEDIA",
@@ -185,13 +185,13 @@ export default function HomePage() {
       <div className="fixed inset-0 bg-[#0a0f1a] flex items-center justify-center z-50 animate-fadeIn">
         <div className="text-center">
           <h1 className="text-7xl font-black text-[#d4ff00] tracking-wider mb-4 animate-slideUp">
-            FRONT ROW
+            SFB Marketing Limited
           </h1>
           <p
             className="text-xl text-[#d4ff00] tracking-wide animate-slideUp"
             style={{ animationDelay: "0.2s" }}
           >
-            Commerce Catalysts
+            Where Talent Meets Traffic!
           </p>
         </div>
       </div>
@@ -289,10 +289,10 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <span className="text-[#d4ff00] text-2xl font-black tracking-tight">
-                FRONT ROW
+                SFB
               </span>
               <span className="text-white text-xs uppercase tracking-wider mt-1">
-                Commerce Catalysts
+                Marketing Limited
               </span>
             </div>
 
@@ -337,26 +337,25 @@ export default function HomePage() {
             muted
             playsInline
           >
-            <source src="/hero-video.mp4" type="video/mp4" />
+            <source src="./hero-video.mp4" type="video/mp4" />
           </video>
         </div>
 
         <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
           <div className="max-w-4xl animate-slideUp">
             <h2 className="text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-              Give New Life To Skin.
+              Smart Marketing. Real Growth.
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              The powerful collection meets skin tone and corrects dark spots
-              with our Bio-Renewal Peptide and a brightening lipid system for
-              improved cell turnover and clarity while targeting signs of aging.
+              We help brands grow by combining elite sales talent, social media
+              strategy, and performance marketing all under one roof.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="px-8 py-3 bg-[#2a4a3a] text-white rounded-full font-medium hover:bg-[#3a5a4a] transition-all hover:scale-105">
                 EXPLORE COLLECTION BENEFITS
               </button>
               <button className="px-8 py-3 bg-[#2a4a3a] text-white rounded-full font-medium hover:bg-[#3a5a4a] transition-all hover:scale-105">
-                THE CLEAN SKIN REVEAL REGIMEN
+                THE CLEAN REVEAL REGIMEN
               </button>
             </div>
           </div>
@@ -400,9 +399,9 @@ export default function HomePage() {
             <div className="animate-slideInRight">
               <p className="text-xl text-gray-700 leading-relaxed">
                 The future of commerce is happening at the point of purchase.
-                Front Row's Retail Media solutions ensure your brand stays
-                visible, competitive, and profitable on the world's leading
-                marketplaces and retailer-owned ad networks.
+                SFB's Retail Media solutions ensure your brand stays visible,
+                competitive, and profitable on the world's leading marketplaces
+                and retailer-owned ad networks.
               </p>
             </div>
           </div>
@@ -540,8 +539,8 @@ export default function HomePage() {
                 display networks.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Front Row helps brands navigate this hyper competitive space
-                with strategies that align performance marketing, retail
+                SFB helps brands navigate this hyper competitive space with
+                strategies that align performance marketing, retail
                 partnerships, and first-party data insights to maximize ROI.
               </p>
             </div>
@@ -607,8 +606,8 @@ export default function HomePage() {
               onToggle={() => setExpandedFAQ(expandedFAQ === 3 ? null : 3)}
             />
             <FAQItem
-              question="Why partner with Front Row for Retail Media?"
-              answer="Front Row brings deep expertise in retail platforms, proprietary analytics tools, and proven strategies that drive measurable results. We combine performance marketing excellence with retail-specific insights to maximize your ROI and accelerate growth."
+              question="Why partner with SFB for Retail Media?"
+              answer="SFB Row brings deep expertise in retail platforms, proprietary analytics tools, and proven strategies that drive measurable results. We combine performance marketing excellence with retail-specific insights to maximize your ROI and accelerate growth."
               isExpanded={expandedFAQ === 4}
               onToggle={() => setExpandedFAQ(expandedFAQ === 4 ? null : 4)}
             />
@@ -922,10 +921,17 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <h3 className="text-3xl font-black text-[#d4ff00] mb-4">
-                FRONT ROW
-              </h3>
-              <p className="text-gray-400 text-sm">Commerce Catalysts</p>
+              <h3 className="text-3xl font-black text-[#d4ff00] mb-4">SFB</h3>
+              <p className="text-gray-400 text-sm mb-6">Marketing Limited</p>
+              <div className="space-y-3 text-gray-400 text-sm">
+                <p className="leading-relaxed">
+                  Office 5, 131 Cranbrook Road
+                  <br />
+                  Ilford, England
+                  <br />
+                  IG1 4SY
+                </p>
+              </div>
             </div>
 
             <div>
@@ -965,27 +971,45 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="font-bold mb-4">CONNECT</h4>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
-                  LinkedIn
+              <h4 className="font-bold mb-4">CONTACT</h4>
+              <ul className="space-y-3 text-gray-400 text-sm">
+                <li>
+                  <a
+                    href="tel:+447988074798"
+                    className="hover:text-[#d4ff00] transition-colors block"
+                  >
+                    +44 7988 074798
+                  </a>
                 </li>
-                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
-                  Twitter
-                </li>
-                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
-                  Instagram
-                </li>
-                <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
-                  Facebook
+                <li>
+                  <a
+                    href="mailto:info@sfbmarketing.com"
+                    className="hover:text-[#d4ff00] transition-colors block"
+                  >
+                    info@sfbmarketing.com
+                  </a>
                 </li>
               </ul>
+              <div className="mt-6">
+                <h4 className="font-bold mb-3">CONNECT</h4>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                    LinkedIn
+                  </li>
+                  <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                    Twitter
+                  </li>
+                  <li className="hover:text-[#d4ff00] cursor-pointer transition-colors">
+                    Instagram
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2025 Front Row. All rights reserved.
+              © 2025 SFB Marketing Limited. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-500">
               <a href="#" className="hover:text-[#d4ff00] transition-colors">
