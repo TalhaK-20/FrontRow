@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
+import Header from "../app/components/Header";
 
 export default function HomePage() {
   const [showLoader, setShowLoader] = useState(true);
@@ -279,52 +281,7 @@ export default function HomePage() {
         }
       `}</style>
 
-      {/* Header */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? "bg-black/95 backdrop-blur-sm shadow-lg" : "bg-black"
-        }`}
-      >
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <span className="text-[#d4ff00] text-2xl font-black tracking-tight">
-                SFB
-              </span>
-              <span className="text-white text-xs uppercase tracking-wider mt-1">
-                Marketing Limited
-              </span>
-            </div>
-
-            <div className="hidden lg:flex items-center space-x-8">
-              <NavItem label="SERVICES" hasDropdown />
-              <NavItem label="CHANNELS" hasDropdown />
-              <NavItem label="INDUSTRIES" hasDropdown />
-              <NavItem label="OUR WORK" />
-              <NavItem label="INSIGHTS" />
-              <NavItem label="ABOUT US" />
-              <NavItem label="CAREERS" />
-              <NavItem label="CONTACT US" />
-            </div>
-
-            <button className="lg:hidden text-white">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </nav>
-      </header>
+      <Header/>
 
       {/* Video Hero Section */}
       <section className="relative h-screen mt-16">
