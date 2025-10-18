@@ -96,6 +96,8 @@ export default function ContactPage() {
     },
   ];
 
+  // Styling starts from here
+
   return (
     <div className="bg-[#F5F5DC]">
       <style jsx>{`
@@ -183,7 +185,8 @@ export default function ContactPage() {
           }
         }
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0) translateX(0);
           }
           50% {
@@ -191,7 +194,8 @@ export default function ContactPage() {
           }
         }
         @keyframes pulse {
-          0%, 100% {
+          0%,
+          100% {
             transform: scale(1);
             opacity: 1;
           }
@@ -236,7 +240,12 @@ export default function ContactPage() {
           animation: pulse 3s ease-in-out infinite;
         }
         .shimmer-effect {
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent
+          );
           background-size: 1000px 100%;
           animation: shimmer 3s infinite;
         }
@@ -248,13 +257,14 @@ export default function ContactPage() {
           transform: rotateY(5deg) rotateX(5deg) scale(1.05);
         }
         .luxury-shadow {
-          box-shadow: 0 25px 70px rgba(85, 107, 47, 0.3), 0 10px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 25px 70px rgba(85, 107, 47, 0.3),
+            0 10px 40px rgba(0, 0, 0, 0.15);
         }
         .inner-shadow {
           box-shadow: inset 0 4px 20px rgba(85, 107, 47, 0.1);
         }
         .text-gradient {
-          background: linear-gradient(135deg, #556B2F 0%, #8B7355 100%);
+          background: linear-gradient(135deg, #556b2f 0%, #8b7355 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -262,7 +272,7 @@ export default function ContactPage() {
         .border-gradient {
           border: 2px solid transparent;
           background: linear-gradient(white, white) padding-box,
-                      linear-gradient(135deg, #556B2F, #8B7355) border-box;
+            linear-gradient(135deg, #556b2f, #8b7355) border-box;
         }
         .perspective-container {
           perspective: 1500px;
@@ -278,13 +288,13 @@ export default function ContactPage() {
       <section className="relative min-h-screen bg-gradient-to-br from-[#2C3E2C] via-[#3D5740] to-[#4A5D3F] text-white pt-32 pb-20 overflow-hidden">
         {/* Professional Background */}
         <div className="absolute inset-0 opacity-[0.07]">
-          <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" 
-            alt="" 
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+            alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-96 h-96 bg-[#8B7355]/20 rounded-full blur-3xl float-animation"></div>
@@ -314,9 +324,13 @@ export default function ContactPage() {
                   Through Strategic Partnership
                 </span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light slide-from-right" style={{ animationDelay: "0.2s" }}>
-                Connect with our distinguished team of industry experts to explore 
-                bespoke solutions tailored to your unique business objectives and vision.
+              <p
+                className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light slide-from-right"
+                style={{ animationDelay: "0.2s" }}
+              >
+                Connect with our distinguished team of industry experts to
+                explore bespoke solutions tailored to your unique business
+                objectives and vision.
               </p>
             </div>
 
@@ -334,7 +348,7 @@ export default function ContactPage() {
                   <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#D4AF37] transition-all duration-700 cursor-pointer overflow-hidden card-3d">
                     {/* Shimmer Effect */}
                     <div className="shimmer-effect absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"></div>
-                    
+
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/0 via-[#8B7355]/0 to-[#556B2F]/0 group-hover:from-[#D4AF37]/10 group-hover:via-[#8B7355]/5 group-hover:to-[#556B2F]/10 transition-all duration-700"></div>
 
@@ -364,13 +378,13 @@ export default function ContactPage() {
       <section className="py-32 bg-gradient-to-br from-[#F5F5DC] via-[#E8DCC4] to-[#D4C5A8] relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" 
-            alt="" 
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-5 gap-12 items-start">
@@ -385,22 +399,31 @@ export default function ContactPage() {
                         </span>
                       </div>
                       <h2 className="text-4xl lg:text-5xl font-light mb-5 text-[#2C3E2C]">
-                        Initiate Your <span className="font-semibold text-[#556B2F]">Transformation</span>
+                        Initiate Your{" "}
+                        <span className="font-semibold text-[#556B2F]">
+                          Transformation
+                        </span>
                       </h2>
                       <p className="text-gray-600 font-light leading-relaxed text-lg">
-                        Complete the form below and our dedicated team will provide a comprehensive 
-                        consultation proposal within 24 hours.
+                        Complete the form below and our dedicated team will
+                        provide a comprehensive consultation proposal within 24
+                        hours.
                       </p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-7">
                       <div className="grid md:grid-cols-2 gap-6">
-                        <div className="relative slide-up-fade" style={{ animationDelay: "0.1s" }}>
+                        <div
+                          className="relative slide-up-fade"
+                          style={{ animationDelay: "0.1s" }}
+                        >
                           <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                             Full Name *
                           </label>
                           <div className="relative">
-                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">👤</span>
+                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                              👤
+                            </span>
                             <input
                               type="text"
                               name="name"
@@ -418,12 +441,17 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        <div className="relative slide-up-fade" style={{ animationDelay: "0.15s" }}>
+                        <div
+                          className="relative slide-up-fade"
+                          style={{ animationDelay: "0.15s" }}
+                        >
                           <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                             Email Address *
                           </label>
                           <div className="relative">
-                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">✉️</span>
+                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                              ✉️
+                            </span>
                             <input
                               type="email"
                               name="email"
@@ -443,12 +471,17 @@ export default function ContactPage() {
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-6">
-                        <div className="relative slide-up-fade" style={{ animationDelay: "0.2s" }}>
+                        <div
+                          className="relative slide-up-fade"
+                          style={{ animationDelay: "0.2s" }}
+                        >
                           <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                             Phone Number
                           </label>
                           <div className="relative">
-                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">📱</span>
+                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                              📱
+                            </span>
                             <input
                               type="tel"
                               name="phone"
@@ -466,12 +499,17 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        <div className="relative slide-up-fade" style={{ animationDelay: "0.25s" }}>
+                        <div
+                          className="relative slide-up-fade"
+                          style={{ animationDelay: "0.25s" }}
+                        >
                           <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                             Company Name
                           </label>
                           <div className="relative">
-                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">🏢</span>
+                            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                              🏢
+                            </span>
                             <input
                               type="text"
                               name="company"
@@ -490,12 +528,17 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <div className="relative slide-up-fade" style={{ animationDelay: "0.3s" }}>
+                      <div
+                        className="relative slide-up-fade"
+                        style={{ animationDelay: "0.3s" }}
+                      >
                         <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                           Service of Interest *
                         </label>
                         <div className="relative">
-                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">🎯</span>
+                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                            🎯
+                          </span>
                           <select
                             name="service"
                             value={formData.service}
@@ -518,12 +561,17 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <div className="relative slide-up-fade" style={{ animationDelay: "0.35s" }}>
+                      <div
+                        className="relative slide-up-fade"
+                        style={{ animationDelay: "0.35s" }}
+                      >
                         <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                           Investment Range
                         </label>
                         <div className="relative">
-                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">💰</span>
+                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#556B2F] text-xl">
+                            💰
+                          </span>
                           <select
                             name="budget"
                             value={formData.budget}
@@ -546,12 +594,17 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <div className="relative slide-up-fade" style={{ animationDelay: "0.4s" }}>
+                      <div
+                        className="relative slide-up-fade"
+                        style={{ animationDelay: "0.4s" }}
+                      >
                         <label className="block text-sm font-semibold text-[#2C3E2C] mb-3 tracking-wide uppercase text-xs">
                           Project Details *
                         </label>
                         <div className="relative">
-                          <span className="absolute left-4 top-6 text-[#556B2F] text-xl">📝</span>
+                          <span className="absolute left-4 top-6 text-[#556B2F] text-xl">
+                            📝
+                          </span>
                           <textarea
                             name="message"
                             value={formData.message}
@@ -581,8 +634,9 @@ export default function ContactPage() {
                       </button>
 
                       <p className="text-xs text-gray-500 text-center font-light leading-relaxed pt-2">
-                        By submitting this form, you consent to our Privacy Policy and agree to receive 
-                        communications regarding your inquiry from SFB Marketing.
+                        By submitting this form, you consent to our Privacy
+                        Policy and agree to receive communications regarding
+                        your inquiry from SFB Marketing.
                       </p>
                     </form>
                   </div>
@@ -592,23 +646,33 @@ export default function ContactPage() {
               {/* Right Side - Info Cards */}
               <div className="lg:col-span-2 space-y-8">
                 {/* Professional Image */}
-                <div className="slide-from-right rounded-3xl overflow-hidden luxury-shadow" style={{ animationDelay: "0.2s" }}>
+                <div
+                  className="slide-from-right rounded-3xl overflow-hidden luxury-shadow"
+                  style={{ animationDelay: "0.2s" }}
+                >
                   <div className="relative">
-                    <img 
-                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
-                      alt="Professional consultation" 
+                    <img
+                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                      alt="Professional consultation"
                       className="w-full h-72 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#2C3E2C]/80 via-transparent to-transparent"></div>
                     <div className="absolute bottom-6 left-6 right-6">
-                      <h3 className="text-white text-2xl font-semibold mb-2">Expert Consultation</h3>
-                      <p className="text-white/80 text-sm font-light">Strategic guidance from industry leaders</p>
+                      <h3 className="text-white text-2xl font-semibold mb-2">
+                        Expert Consultation
+                      </h3>
+                      <p className="text-white/80 text-sm font-light">
+                        Strategic guidance from industry leaders
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Why Choose Us */}
-                <div className="bg-gradient-to-br from-[#556B2F] to-[#3D5740] text-white rounded-3xl p-10 luxury-shadow slide-from-right" style={{ animationDelay: "0.3s" }}>
+                <div
+                  className="bg-gradient-to-br from-[#556B2F] to-[#3D5740] text-white rounded-3xl p-10 luxury-shadow slide-from-right"
+                  style={{ animationDelay: "0.3s" }}
+                >
                   <div className="flex items-center space-x-3 mb-8">
                     <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center text-2xl">
                       ⭐
@@ -619,12 +683,32 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-6">
                     {[
-                      { icon: "📊", title: "Performance-Driven Excellence", desc: "Strategic methodologies delivering measurable ROI" },
-                      { icon: "🎯", title: "Data-Informed Strategy", desc: "Evidence-based approaches with advanced analytics" },
-                      { icon: "🔄", title: "Continuous Optimization", desc: "Ongoing refinement for maximum performance" },
-                      { icon: "💎", title: "Transparent Partnership", desc: "Clear communication and detailed accountability" }
+                      {
+                        icon: "📊",
+                        title: "Performance-Driven Excellence",
+                        desc: "Strategic methodologies delivering measurable ROI",
+                      },
+                      {
+                        icon: "🎯",
+                        title: "Data-Informed Strategy",
+                        desc: "Evidence-based approaches with advanced analytics",
+                      },
+                      {
+                        icon: "🔄",
+                        title: "Continuous Optimization",
+                        desc: "Ongoing refinement for maximum performance",
+                      },
+                      {
+                        icon: "💎",
+                        title: "Transparent Partnership",
+                        desc: "Clear communication and detailed accountability",
+                      },
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start space-x-4 group cursor-pointer pop-in" style={{ animationDelay: `${0.5 + idx * 0.1}s` }}>
+                      <div
+                        key={idx}
+                        className="flex items-start space-x-4 group cursor-pointer pop-in"
+                        style={{ animationDelay: `${0.5 + idx * 0.1}s` }}
+                      >
                         <div className="w-12 h-12 rounded-lg bg-[#D4AF37]/20 flex items-center justify-center text-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                           {item.icon}
                         </div>
@@ -642,7 +726,10 @@ export default function ContactPage() {
                 </div>
 
                 {/* Office Location */}
-                <div className="bg-white rounded-3xl p-10 luxury-shadow border-2 border-[#556B2F]/20 slide-from-right" style={{ animationDelay: "0.4s" }}>
+                <div
+                  className="bg-white rounded-3xl p-10 luxury-shadow border-2 border-[#556B2F]/20 slide-from-right"
+                  style={{ animationDelay: "0.4s" }}
+                >
                   <div className="flex items-center space-x-3 mb-8">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#556B2F] to-[#3D5740] flex items-center justify-center text-2xl">
                       📍
@@ -657,7 +744,9 @@ export default function ContactPage() {
                         🏢
                       </div>
                       <div>
-                        <p className="font-semibold text-base mb-1 text-[#2C3E2C]">Headquarters</p>
+                        <p className="font-semibold text-base mb-1 text-[#2C3E2C]">
+                          Headquarters
+                        </p>
                         <span className="text-xs bg-[#D4AF37] text-white px-3 py-1 rounded-full font-medium">
                           Primary Location
                         </span>
@@ -675,14 +764,20 @@ export default function ContactPage() {
                     <div className="pt-5 border-t border-gray-200">
                       <p className="text-sm text-gray-600 font-light flex items-center space-x-2">
                         <span className="text-[#556B2F] text-lg">⏰</span>
-                        <span><strong className="font-semibold">Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM GMT</span>
+                        <span>
+                          <strong className="font-semibold">Hours:</strong>{" "}
+                          Mon-Fri, 9:00 AM - 6:00 PM GMT
+                        </span>
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Stats */}
-                <div className="bg-gradient-to-br from-[#D4AF37] via-[#C19A6B] to-[#8B7355] rounded-3xl p-10 luxury-shadow slide-from-right" style={{ animationDelay: "0.5s" }}>
+                <div
+                  className="bg-gradient-to-br from-[#D4AF37] via-[#C19A6B] to-[#8B7355] rounded-3xl p-10 luxury-shadow slide-from-right"
+                  style={{ animationDelay: "0.5s" }}
+                >
                   <h3 className="text-2xl font-semibold mb-8 text-white flex items-center space-x-3">
                     <span className="text-3xl">📈</span>
                     <span>Performance Metrics</span>
@@ -692,10 +787,17 @@ export default function ContactPage() {
                       { value: "150+", label: "Completed Projects" },
                       { value: "98%", label: "Client Satisfaction" },
                       { value: "$50M+", label: "Revenue Generated" },
-                      { value: "24hrs", label: "Response Time" }
+                      { value: "24hrs", label: "Response Time" },
                     ].map((stat, idx) => (
-                      <div key={idx} className="text-center pop-in" style={{ animationDelay: `${0.7 + idx * 0.1}s` }}>
-                        <div className="text-5xl font-light mb-2 text-white pulse-animation" style={{ animationDelay: `${idx * 0.5}s` }}>
+                      <div
+                        key={idx}
+                        className="text-center pop-in"
+                        style={{ animationDelay: `${0.7 + idx * 0.1}s` }}
+                      >
+                        <div
+                          className="text-5xl font-light mb-2 text-white pulse-animation"
+                          style={{ animationDelay: `${idx * 0.5}s` }}
+                        >
                           {stat.value}
                         </div>
                         <div className="text-xs font-medium text-white/90 uppercase tracking-wider">
@@ -714,13 +816,13 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section className="py-32 bg-gradient-to-br from-[#556B2F] via-[#3D5740] to-[#2C3E2C] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05]">
-          <img 
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80" 
-            alt="" 
+          <img
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80"
+            alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
@@ -735,7 +837,8 @@ export default function ContactPage() {
                 <span className="font-semibold text-[#D4AF37]">Questions</span>
               </h2>
               <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
-                Explore answers to common questions about our services, processes, and partnership models
+                Explore answers to common questions about our services,
+                processes, and partnership models
               </p>
             </div>
 
@@ -781,22 +884,31 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <h3 className="text-4xl lg:text-5xl font-light mb-6 text-[#2C3E2C]">
-                    Visit Our <span className="font-semibold text-[#556B2F]">London Office</span>
+                    Visit Our{" "}
+                    <span className="font-semibold text-[#556B2F]">
+                      London Office
+                    </span>
                   </h3>
                   <p className="text-gray-600 mb-10 font-light leading-relaxed text-lg">
-                    Office 5, 131 Cranbrook Road<br />
-                    Ilford, England, IG1 4SY<br />
+                    Office 5, 131 Cranbrook Road
+                    <br />
+                    Ilford, England, IG1 4SY
+                    <br />
                     United Kingdom
                   </p>
-                  
+
                   <div className="space-y-5 mb-10">
                     <div className="flex items-center space-x-4 group cursor-pointer">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#556B2F] to-[#3D5740] flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                         📞
                       </div>
                       <div>
-                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">Phone</p>
-                        <p className="font-light text-gray-700">+44 7988 074798</p>
+                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">
+                          Phone
+                        </p>
+                        <p className="font-light text-gray-700">
+                          +44 7988 074798
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4 group cursor-pointer">
@@ -804,12 +916,16 @@ export default function ContactPage() {
                         📧
                       </div>
                       <div>
-                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">Email</p>
-                        <p className="font-light text-gray-700">info@sfbmarketing.com</p>
+                        <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-1">
+                          Email
+                        </p>
+                        <p className="font-light text-gray-700">
+                          info@sfbmarketing.com
+                        </p>
                       </div>
                     </div>
                   </div>
-                  
+
                   <a
                     href="https://maps.google.com"
                     target="_blank"
@@ -817,22 +933,28 @@ export default function ContactPage() {
                     className="inline-flex items-center space-x-4 px-10 py-5 bg-gradient-to-r from-[#556B2F] to-[#3D5740] text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 w-fit group"
                   >
                     <span>Get Directions</span>
-                    <span className="text-2xl group-hover:translate-x-2 transition-transform duration-500">→</span>
+                    <span className="text-2xl group-hover:translate-x-2 transition-transform duration-500">
+                      →
+                    </span>
                   </a>
                 </div>
-                
+
                 {/* Right Image */}
                 <div className="relative h-96 lg:h-auto slide-from-right">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
-                    alt="Office building" 
+                  <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"
+                    alt="Office building"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#556B2F]/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-8 left-8 right-8">
                     <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 luxury-shadow">
-                      <p className="text-sm font-semibold text-[#556B2F] mb-2">📍 Prime Location</p>
-                      <p className="text-xs text-gray-600 font-light">Accessible via public transport and major motorways</p>
+                      <p className="text-sm font-semibold text-[#556B2F] mb-2">
+                        📍 Prime Location
+                      </p>
+                      <p className="text-xs text-gray-600 font-light">
+                        Accessible via public transport and major motorways
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -845,19 +967,22 @@ export default function ContactPage() {
       {/* Final CTA */}
       <section className="relative py-32 bg-gradient-to-br from-[#2C3E2C] via-[#556B2F] to-[#3D5740] overflow-hidden">
         <div className="absolute inset-0 opacity-[0.08]">
-          <img 
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80" 
-            alt="" 
+          <img
+            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
+            alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#D4AF37]/20 rounded-full blur-3xl float-animation"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#8B7355]/20 rounded-full blur-3xl float-animation" style={{ animationDelay: "3s" }}></div>
+          <div
+            className="absolute bottom-10 left-10 w-96 h-96 bg-[#8B7355]/20 rounded-full blur-3xl float-animation"
+            style={{ animationDelay: "3s" }}
+          ></div>
         </div>
-        
+
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-5xl mx-auto fade-in-scale">
             <div className="mb-10">
@@ -866,13 +991,19 @@ export default function ContactPage() {
               </span>
             </div>
             <h2 className="text-5xl lg:text-7xl font-light mb-10 text-white leading-tight">
-              Ready to <span className="font-semibold text-[#D4AF37]">Transform<br/>Your Business?</span>
+              Ready to{" "}
+              <span className="font-semibold text-[#D4AF37]">
+                Transform
+                <br />
+                Your Business?
+              </span>
             </h2>
             <p className="text-xl lg:text-2xl mb-16 text-gray-300 leading-relaxed font-light max-w-4xl mx-auto">
-              Schedule a complimentary consultation with our strategic advisory team to explore 
-              bespoke solutions that will elevate your brand and drive exceptional, measurable results.
+              Schedule a complimentary consultation with our strategic advisory
+              team to explore bespoke solutions that will elevate your brand and
+              drive exceptional, measurable results.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <button className="group px-12 py-6 bg-gradient-to-r from-[#D4AF37] via-[#C19A6B] to-[#8B7355] text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-110 flex items-center justify-center space-x-4 luxury-shadow pop-in">
                 <span>Schedule Consultation</span>
@@ -880,12 +1011,18 @@ export default function ContactPage() {
                   →
                 </span>
               </button>
-              <button className="px-12 py-6 border-2 border-white/40 text-white rounded-xl font-semibold text-lg hover:bg-white/10 hover:border-white transition-all duration-700 backdrop-blur-sm hover:scale-105 pop-in" style={{ animationDelay: "0.2s" }}>
+              <button
+                className="px-12 py-6 border-2 border-white/40 text-white rounded-xl font-semibold text-lg hover:bg-white/10 hover:border-white transition-all duration-700 backdrop-blur-sm hover:scale-105 pop-in"
+                style={{ animationDelay: "0.2s" }}
+              >
                 View Case Studies
               </button>
             </div>
-            
-            <div className="pt-16 border-t border-white/20 slide-from-bottom" style={{ animationDelay: "0.4s" }}>
+
+            <div
+              className="pt-16 border-t border-white/20 slide-from-bottom"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="flex flex-wrap items-center justify-center gap-8 text-gray-400 font-light text-sm">
                 <div className="flex items-center space-x-2">
                   <span className="text-[#D4AF37] text-xl">✓</span>
