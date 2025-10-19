@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "../app/components/Header";
 import Footer from "../app/components/Footer";
+import Loader from "../app/components/Loader"
 
 export default function OurWorkPage() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -256,6 +257,7 @@ export default function OurWorkPage() {
         }
       `}</style>
 
+      {/* <Loader /> */}
       <Header />
 
       {/* Hero Section */}
@@ -273,7 +275,7 @@ export default function OurWorkPage() {
             <p className="text-sm font-bold text-[#c9b896] mb-4 tracking-[0.3em] uppercase">
               Our Work
             </p>
-            <h1 className="text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight">
+            <h1 className="text-6xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight">
               WE'RE YOUR ECOMMERCE
               <br />
               <span className="text-[#c9b896] font-light italic">

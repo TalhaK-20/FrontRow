@@ -475,7 +475,7 @@ export default function ServicesPage() {
             <p className="text-sm font-bold text-[#c9b896] mb-6 tracking-[0.3em] uppercase slide-in-top">
               Our Services
             </p>
-            <h1 className="text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight slide-in-left">
+            <h1 className="text-6xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight slide-in-left">
               WE DON'T DO{" "}
               <span className="font-light italic text-[#c9b896]">
                 Guesswork

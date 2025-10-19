@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
             <span className="text-[#d4ff00] text-2xl font-black tracking-tight">
-              SFB
+              <img src="../favicon.ico" alt="SFB Logo" />
             </span>
             <span className="text-white text-xs uppercase tracking-wider mt-1">
               Marketing Limited
@@ -44,7 +44,7 @@ export default function Header() {
             <NavItem label="CONTACT US" href="/contact" />
           </div>
 
-          <button 
+          <button
             className="lg:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -79,7 +79,12 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               <NavItem label="SERVICES" href="/services" hasDropdown mobile />
               <NavItem label="CHANNELS" href="/channels" hasDropdown mobile />
-              <NavItem label="INDUSTRIES" href="/industries" hasDropdown mobile />
+              <NavItem
+                label="INDUSTRIES"
+                href="/industries"
+                hasDropdown
+                mobile
+              />
               <NavItem label="OUR WORK" href="/our-work" mobile />
               <NavItem label="INSIGHTS" href="/insights" mobile />
               <NavItem label="ABOUT US" href="/about" mobile />
@@ -95,9 +100,11 @@ export default function Header() {
 
 function NavItem({ label, href, hasDropdown = false, mobile = false }) {
   return (
-    <Link 
+    <Link
       href={href}
-      className={`text-white hover:text-[#d4ff00] font-medium text-sm tracking-wide transition-colors flex items-center space-x-1 group ${mobile ? 'w-full justify-between py-2' : ''}`}
+      className={`text-white hover:text-[#d4ff00] font-medium text-sm tracking-wide transition-colors flex items-center space-x-1 group ${
+        mobile ? "w-full justify-between py-2" : ""
+      }`}
     >
       <span>{label}</span>
       {hasDropdown && (

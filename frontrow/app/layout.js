@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Front Row - Commerce Catalysts",
-  description: "Optimize your retail media strategy",
+  title: "SFB - Marketing Catalysts",
+  description: "Optimize your marketing strategy",
 };
 
 export default function RootLayout({ children }) {
