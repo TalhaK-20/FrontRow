@@ -204,7 +204,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#6B8E23] to-[#D2B48C] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
           <div className="relative w-32 h-32 mx-auto mb-8 animate-float">
             <img 
-              src="./logo.PNG" 
+              src="./logo.png" 
               alt="SFB Marketing" 
               className="w-full h-full object-contain filter drop-shadow-2xl"
             />

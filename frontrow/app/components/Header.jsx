@@ -35,8 +35,8 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center space-x-8">
             <NavItem label="SERVICES" href="/services" />
-            <NavItem label="CHANNELS" href="/channels" hasDropdown />
-            <NavItem label="INDUSTRIES" href="/industries" hasDropdown />
+            <NavItem label="CHANNELS" href="/channels" />
+            <NavItem label="INDUSTRIES" href="/industries" />
             <NavItem label="OUR WORK" href="/our-work" />
             <NavItem label="INSIGHTS" href="/insights" />
             <NavItem label="ABOUT US" href="/about" />
